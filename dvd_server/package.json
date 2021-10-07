@@ -1,0 +1,31 @@
+{
+    "name": "dvd_server",
+    "version": "1.0.0",
+    "description": "Activity by group implimenting insert update delete in dvdrental database tables: customer, film and rental.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jgerongco14/group_dvdrental.git"
+    },
+    "keywords": [
+        "interface",
+        "database",
+        "postgres",
+        "insert",
+        "update",
+        "delete"
+    ],
+    "author": "Gerongco, Aranas Brother, Castro, Desamparado, Uyanguren",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jgerongco14/group_dvdrental/issues"
+    },
+    "homepage": "https://github.com/jgerongco14/group_dvdrental#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "pg": "^8.7.1"
+    }
+}
