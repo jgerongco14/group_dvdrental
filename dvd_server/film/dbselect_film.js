@@ -1,4 +1,4 @@
-const pool = require("./db");
+const pool = require("../db");
 
 pool.query("SELECT * FROM public.film", (err, res) => {
   try {
