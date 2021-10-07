@@ -1,13 +1,13 @@
 const pool = require("../db");
+const sql =
+  "INSERT INTO public.rental( inventory_id, customer_id,return_date, staff_id) VALUES ($1,$2,$3,$4) RETURNING *";
+
+const value = [12, 12, "2005-05-26 22:04:30", 1];
 
 pool.query(
-  "INSERT INTO public.rental(rental_date, invertory_id, costumer_id, return_date, staff_id, last_update) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *",
-  ["2005-05-24 21:53:30"],
-  ["21"],
-  ["21"],
-  ["2005-05-24 21:53:30"],
-  ["21"],
-  ["2005-05-24 21:53:30"],
+  sql,
+  value,
+
   (err, res) => {
     if (err) {
       console.log(err.stack);
