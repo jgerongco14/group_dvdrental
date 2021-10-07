@@ -1,8 +1,12 @@
 const pool = require("../db");
 
+const sql = "DELETE FROM public.film WHERE film_id = $1 RETURNING *";
+const value = [1001];
+
 pool.query(
-  "UPDATE public.customer SET email = $1 WHERE customer_id = 600 RETURNING *",
-  ["divinedesamparado1834@gmail.com"],
+  sql,
+  value,
+
   (err, res) => {
     if (err) {
       console.log(err.stack);
@@ -11,4 +15,5 @@ pool.query(
     }
   }
 );
+
 pool.end();
